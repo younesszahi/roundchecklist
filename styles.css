@@ -1,6 +1,0 @@
-document.getElementById('checklistForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent form submission
-  // You can add further logic here, such as form validation or handling form data submission.
-  // For now, we prevent the default behavior to demonstrate script inclusion.
-  alert('Form submitted!'); // Example alert
-});
