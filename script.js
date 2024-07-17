@@ -5,7 +5,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     const password = document.getElementById("password").value;
 
     if (username === "cdg" && password === "cdg") {
-        window.location.href = "form.html"; // Redirect to the form page
+        window.location.href = "amazon_form.html"; // Redirect to the form page
     } else {
         alert("Invalid username or password. Please try again.");
     }
