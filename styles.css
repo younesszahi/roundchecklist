@@ -3,7 +3,6 @@
     --iframe-top: -195px; /* Adjust to hide the first row */
     --iframe-left: -60px; /* Adjust to hide the first column */
     --iframe-bottom: 100px; /* Adjust to hide the bottom part */
-    --border-radius: 20px; /* Rounded corners */
 }
 
 body {
@@ -29,12 +28,11 @@ header {
 .iframe-container {
     position: relative;
     width: 90%;
-    max-width: 1200px; /* Limit the maximum width */
-    height: 80vh; /* Use viewport height for responsiveness */
+    height: 800px; /* Adjust height as needed */
     overflow: hidden;
     background-color: #232f3e; /* Amazon dark blue background */
     margin: 0 auto; /* Center the container horizontally */
-    border-radius: var(--border-radius); /* Rounded corners for the container */
+    border-radius: 20px; /* Rounded corners for the container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visual effect */
 }
 
@@ -56,7 +54,5 @@ header {
     width: calc(100% + 60px); /* Ensure width covers the full content including cropped column */
     height: calc(100% + var(--iframe-bottom)); /* Adjust height to cover the full height including cropped row */
     border: none;
-    border-radius: var(--border-radius); /* Rounded corners for the iframe */
-    min-width: 100%;
-    min-height: 100%;
+    border-radius: 20px; /* Rounded corners for the iframe */
 }
