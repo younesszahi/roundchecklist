@@ -1,90 +1,58 @@
+/* styles.css */
+:root {
+    --iframe-top: -195px; /* Adjust to hide the first row */
+    --iframe-left: -60px; /* Adjust to hide the first column */
+    --iframe-bottom: 100px; /* Adjust to hide the bottom part */
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #232f3e; /* Amazon blue */
-    color: #f3f3f3; /* Light text color for contrast */
     margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #232f3e; /* Amazon dark blue */
+    color: #f3f3f3; /* Amazon light gray */
 }
 
-.login-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.login-content {
-    width: 90%;
-    max-width: 400px;
-    padding: 40px;
-    background-color: #34495e; /* Lighter background */
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+header {
+    background-color: #232f3e; /* Amazon dark blue */
+    color: #f3f3f3; /* Amazon light gray */
+    padding: 20px;
     text-align: center;
-    animation: fadeIn 1.5s ease;
+    border-bottom: 2px solid #ff9900; /* Amazon orange */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.amazon-logo {
-    max-width: 100px;
+#amazon-logo {
+    width: 150px;
     height: auto;
-    margin-bottom: 20px;
 }
 
-h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.iframe-container {
+    position: relative;
+    width: 90%;
+    height: 800px; /* Adjust height as needed */
+    overflow: hidden;
+    background-color: #232f3e; /* Amazon dark blue background */
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 20px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visual effect */
 }
 
-.form-group {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-label {
+.iframe-container::after {
+    content: "";
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #f3f3f3;
-}
-
-input[type="text"],
-input[type="password"] {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #e0e0e0; /* Light gray background */
-    border: none;
-    border-radius: 5px;
-    color: #333;
-    box-sizing: border-box;
+    height: var(--iframe-bottom);
+    background: #232f3e; /* Matches background color to hide cropped area */
 }
 
-button[type="submit"] {
-    background-color: #ff9900; /* Amazon orange */
-    color: #fff;
-    padding: 12px 20px;
+.iframe-container iframe {
+    position: absolute;
+    top: var(--iframe-top); /* Use variable for top cropping */
+    left: var(--iframe-left); /* Use variable for left cropping */
+    width: calc(100% + 60px); /* Ensure width covers the full content including cropped column */
+    height: calc(100% + var(--iframe-bottom)); /* Adjust height to cover the full height including cropped row */
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: #e68a00; /* Darker orange on hover */
+    border-radius: 20px; /* Rounded corners for the iframe */
 }
