@@ -1,7 +1,7 @@
 /* styles.css */
 :root {
-    --iframe-top: -195px; /* Adjust to hide the first row */
-    --iframe-left: -60px; /* Adjust to hide the first column */
+    --iframe-top: -185px; /* Adjust to hide the first row */
+    --iframe-left: -50px; /* Adjust to hide the first column */
     --iframe-bottom: 100px; /* Adjust to hide the bottom part */
 }
 
@@ -20,9 +20,34 @@ header {
     border-bottom: 2px solid #ff9900; /* Amazon orange */
 }
 
+.header-content {
+    position: relative;
+}
+
 #amazon-logo {
-    width: 150px;
+    width: 250px;
     height: auto;
+    margin-top: 10px; /* Add space between button and logo */
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #f3f3f3; /* Amazon light gray */
+    background-color: #ff9900; /* Amazon orange */
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: absolute;
+    top: 130px; /* Position button above the logo */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .iframe-container {
