@@ -57,7 +57,6 @@ header {
     height: calc(100% + var(--iframe-bottom)); /* Adjust height to cover the full height including cropped row */
     border: none;
     border-radius: var(--border-radius); /* Rounded corners for the iframe */
-    /* Ensure the iframe is responsive and touch-friendly */
     min-width: 100%;
     min-height: 100%;
 }
